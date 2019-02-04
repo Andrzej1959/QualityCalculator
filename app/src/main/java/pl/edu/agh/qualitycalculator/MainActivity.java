@@ -14,6 +14,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     EditText etNum1;
     EditText etNum2;
+    EditText etNum3;
 
     Button btnAdd;
     Button btnSub;
@@ -32,6 +33,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         etNum1 = (EditText) findViewById(R.id.etNum1);
         etNum2 = (EditText) findViewById(R.id.etNum2);
+        etNum3 = (EditText) findViewById(R.id.etNum3);
 
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnSub = (Button) findViewById(R.id.btnSub);
@@ -74,6 +76,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         float num1 = Float.parseFloat(etNum1.getText().toString());
         float num2 = Float.parseFloat(etNum2.getText().toString());
+
         try {
             float result = calculations.calculate(selectedOperation, num1, num2);
             String verbalizedOperation = verbalizer.verbalize(selectedOperation, num1, num2, result);
@@ -81,7 +84,31 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
         catch (Exception ex) {
             tvResult.setText("An error ocurred: " + ex.toString());
-        };
+        }
+
+    }
+
+    public void onClickAvg(View v) {
+        if (TextUtils.isEmpty(etNum1.getText().toString())
+                || TextUtils.isEmpty(etNum2.getText().toString())
+                || TextUtils.isEmpty(etNum3.getText().toString())) {
+            tvResult.setText("Enter some data to calculate");
+            return;
+        }
+
+        float num1 = Float.parseFloat(etNum1.getText().toString());
+        float num2 = Float.parseFloat(etNum2.getText().toString());
+        float num3 = Float.parseFloat(etNum3.getText().toString());
+
+        Operation selectedOperation = Operation.AVG;
+        try {
+            float result = calculations.calculate(selectedOperation, num1, num2, num3);
+            String verbalizedOperation = verbalizer.verbalize(selectedOperation, num1, num2, num3, result);
+            tvResult.setText(verbalizedOperation);
+        }
+        catch (Exception ex) {
+            tvResult.setText("An error ocurred: " + ex.toString());
+        }
 
     }
 }

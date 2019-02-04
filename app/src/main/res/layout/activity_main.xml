@@ -78,4 +78,18 @@
         android:id="@+id/tvResult"
         android:gravity="center_horizontal">
     </TextView>
+
+    <EditText
+        android:id="@+id/etNum3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnAvg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickAvg"
+        android:text="AVG" />
 </LinearLayout>
