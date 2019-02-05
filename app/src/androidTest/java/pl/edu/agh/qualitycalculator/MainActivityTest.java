@@ -65,14 +65,27 @@ public class MainActivityTest {
         onView(withId(R.id.tvResult)).check(matches(withText("0.0 divided by 0.0 gives value NaN")));
     }
     @Test
-    public void testEmpty1(){
+    public void testAddEmpty1(){
         onView(withId(R.id.etNum1)).perform(click()).perform(typeText(""));
         onView(withId(R.id.etNum2)).perform(click()).perform(typeText("6"));
         onView(withId(R.id.btnDiv)).perform(click());
         onView(withId(R.id.tvResult)).check(matches(withText("Enter some data to calculate")));
     }
     @Test
-    public void testEmpty2(){
+    public void testAddEmpty2(){
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText("7"));
+        onView(withId(R.id.etNum2)).perform(click()).perform(typeText(""));
+        onView(withId(R.id.btnAdd)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("Enter some data to calculate")));
+    }
+    public void testDivEmpty1(){
+        onView(withId(R.id.etNum1)).perform(click()).perform(typeText(""));
+        onView(withId(R.id.etNum2)).perform(click()).perform(typeText("6"));
+        onView(withId(R.id.btnDiv)).perform(click());
+        onView(withId(R.id.tvResult)).check(matches(withText("Enter some data to calculate")));
+    }
+    @Test
+    public void testDivEmpty2(){
         onView(withId(R.id.etNum1)).perform(click()).perform(typeText("7"));
         onView(withId(R.id.etNum2)).perform(click()).perform(typeText(""));
         onView(withId(R.id.btnDiv)).perform(click());
