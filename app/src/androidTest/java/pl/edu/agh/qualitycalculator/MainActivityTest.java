@@ -72,7 +72,7 @@ public class MainActivityTest {
         onView(withId(R.id.tvResult)).check(matches(withText("Enter some data to calculate")));
     }
     @Test
-    public void testEmpty12(){
+    public void testEmpty2(){
         onView(withId(R.id.etNum1)).perform(click()).perform(typeText("7"));
         onView(withId(R.id.etNum2)).perform(click()).perform(typeText(""));
         onView(withId(R.id.btnDiv)).perform(click());
