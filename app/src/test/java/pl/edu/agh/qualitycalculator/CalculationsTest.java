@@ -55,7 +55,10 @@ public class CalculationsTest {
     public void testDivF() throws Exception {
         assertEquals(0.5, calculationsUnderTest.divide( 2, 4), 0.01);
     }
-
+    @Test
+    public void testAvgF() throws Exception {
+        assertEquals(4, calculationsUnderTest.avg( 3, 4, 5), 0.01);
+    }
 
     @After
     public void tearDown() {

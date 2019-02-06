@@ -41,7 +41,7 @@ public class Calculations {
         return operand1 / operand2;
     }
 
-    private float avg(float operand1, float operand2, float operand3) {
+    float avg(float operand1, float operand2, float operand3) {
         return (operand1 + operand2 + operand3)/((float)3.0) ;
     }
 
