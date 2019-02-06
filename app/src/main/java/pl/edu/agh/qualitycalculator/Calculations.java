@@ -24,24 +24,23 @@ public class Calculations {
         }
     }
 
-
-    float sum(float operand1, float operand2) {
+    private float sum(float operand1, float operand2) {
         return operand1 + operand2;
     }
 
-    float subtract(float operand1, float operand2) {
+    private float subtract(float operand1, float operand2) {
         return operand1 - operand2;
     }
 
-    float multiply(float operand1, float operand2) {
+    private float multiply(float operand1, float operand2) {
         return operand1 * operand2;
     }
 
-    float divide(float operand1, float operand2) {
+    private float divide(float operand1, float operand2) {
         return operand1 / operand2;
     }
 
-    float avg(float operand1, float operand2, float operand3) {
+    private float avg(float operand1, float operand2, float operand3) {
         return (operand1 + operand2 + operand3)/((float)3.0) ;
     }
 

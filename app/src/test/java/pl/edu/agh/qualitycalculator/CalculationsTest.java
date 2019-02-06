@@ -38,7 +38,7 @@ public class CalculationsTest {
     public void testAvg() throws Exception {
         assertEquals(4, calculationsUnderTest.calculate(Operation.AVG, 2, 3, 7), 0.01);
     }
-
+/*
     @Test
     public void testSumF() throws Exception {
         assertEquals(5, calculationsUnderTest.sum( 2, 3), 0.01);
@@ -59,7 +59,7 @@ public class CalculationsTest {
     public void testAvgF() throws Exception {
         assertEquals(4, calculationsUnderTest.avg( 3, 4, 5), 0.01);
     }
-
+*/
     @After
     public void tearDown() {
     }
