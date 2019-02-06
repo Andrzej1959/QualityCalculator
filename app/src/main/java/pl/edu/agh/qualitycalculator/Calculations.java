@@ -25,19 +25,19 @@ public class Calculations {
     }
 
 
-    private float sum(float operand1, float operand2) {
+    float sum(float operand1, float operand2) {
         return operand1 + operand2;
     }
 
-    private float subtract(float operand1, float operand2) {
+    float subtract(float operand1, float operand2) {
         return operand1 - operand2;
     }
 
-    private float multiply(float operand1, float operand2) {
+    float multiply(float operand1, float operand2) {
         return operand1 * operand2;
     }
 
-    private float divide(float operand1, float operand2) {
+    float divide(float operand1, float operand2) {
         return operand1 / operand2;
     }
 

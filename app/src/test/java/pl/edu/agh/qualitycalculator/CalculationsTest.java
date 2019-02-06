@@ -39,6 +39,24 @@ public class CalculationsTest {
         assertEquals(4, calculationsUnderTest.calculate(Operation.AVG, 2, 3, 7), 0.01);
     }
 
+    @Test
+    public void testSumF() throws Exception {
+        assertEquals(5, calculationsUnderTest.sum( 2, 3), 0.01);
+    }
+    @Test
+    public void testSubF() throws Exception {
+        assertEquals(-1, calculationsUnderTest.subtract( 2, 3), 0.01);
+    }
+    @Test
+    public void testMulF() throws Exception {
+        assertEquals(6, calculationsUnderTest.multiply( 2, 3), 0.01);
+    }
+    @Test
+    public void testDivF() throws Exception {
+        assertEquals(0.5, calculationsUnderTest.divide( 2, 4), 0.01);
+    }
+
+
     @After
     public void tearDown() {
     }
