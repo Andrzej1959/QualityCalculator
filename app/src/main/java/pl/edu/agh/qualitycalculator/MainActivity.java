@@ -85,7 +85,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         catch (Exception ex) {
             tvResult.setText("An error ocurred: " + ex.toString());
         }
-
     }
 
     public void onClickAvg(View v) {
